@@ -67,8 +67,8 @@ module roda() {
         
         // Aro
         
-        rotate([90,0,0])
-        cylinder(h=largura_roda*1, r=5, center=false, $fn=30);
+        //rotate([90,0,0])
+        //cylinder(h=largura_roda*1, r=5, center=false, $fn=30);
         
         
     }
@@ -150,16 +150,16 @@ union() {
     escapamento();
     
     // Rodas
-    translate([posicao_eixo_dianteiro, largura_carro/2+(largura_roda*0.1) , diametro_roda/2])
+    translate([posicao_eixo_dianteiro, largura_carro/2-(largura_roda*0.1) , diametro_roda/2])
     roda();
     
-    translate([posicao_eixo_dianteiro, -largura_carro/2-(-largura_roda*0.9) , diametro_roda/2])
+    translate([posicao_eixo_dianteiro, -largura_carro/2-(-largura_roda*1.1) , diametro_roda/2])
     roda();
     
-    translate([posicao_eixo_traseiro, largura_carro/2+(largura_roda*0.1), diametro_roda/2])
+    translate([posicao_eixo_traseiro, largura_carro/2-(largura_roda*0.1), diametro_roda/2])
     roda();
     
-    translate([posicao_eixo_traseiro, -largura_carro/2 -(-largura_roda*0.9), diametro_roda/2])
+    translate([posicao_eixo_traseiro, -largura_carro/2 -(-largura_roda*1.1), diametro_roda/2])
     roda();
 }
 
