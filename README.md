@@ -1,1 +1,1 @@
-gcc mingw hook hoks the mingw
+gcc mingw hook hooks the mingw
